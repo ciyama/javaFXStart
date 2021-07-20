@@ -2628,3 +2628,47 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.eclemma.core 4 5001 2021-07-20 20:15:37.511
+!MESSAGE Error while loading coverage session (code 5001).
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error while analyzing package fragment root src at null (code 5007).
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.analyzeInternal(PackageFragementRootAnalyzer.java:79)
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.analyze(PackageFragementRootAnalyzer.java:51)
+	at org.eclipse.eclemma.internal.core.analysis.SessionAnalyzer.processPackageFragmentRoot(SessionAnalyzer.java:100)
+	at org.eclipse.eclemma.internal.core.analysis.SessionAnalyzer.processSession(SessionAnalyzer.java:80)
+	at org.eclipse.eclemma.internal.core.JavaCoverageLoader$LoadSessionJob.run(JavaCoverageLoader.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: Java Model Exception: Java Model Status [javafx4 does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:327)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:313)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:530)
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.getClassfilesLocation(PackageFragementRootAnalyzer.java:111)
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.analyzeInternal(PackageFragementRootAnalyzer.java:59)
+	... 5 more
+!SUBENTRY 1 org.eclipse.eclemma.core 4 5007 2021-07-20 20:15:37.513
+!MESSAGE Error while analyzing package fragment root src at null (code 5007).
+!STACK 1
+Java Model Exception: Java Model Status [javafx4 does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:327)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:313)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:530)
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.getClassfilesLocation(PackageFragementRootAnalyzer.java:111)
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.analyzeInternal(PackageFragementRootAnalyzer.java:59)
+	at org.eclipse.eclemma.internal.core.analysis.PackageFragementRootAnalyzer.analyze(PackageFragementRootAnalyzer.java:51)
+	at org.eclipse.eclemma.internal.core.analysis.SessionAnalyzer.processPackageFragmentRoot(SessionAnalyzer.java:100)
+	at org.eclipse.eclemma.internal.core.analysis.SessionAnalyzer.processSession(SessionAnalyzer.java:80)
+	at org.eclipse.eclemma.internal.core.JavaCoverageLoader$LoadSessionJob.run(JavaCoverageLoader.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.jdt.core 4 969 2021-07-20 20:15:37.513
+!MESSAGE javafx4 does not exist
